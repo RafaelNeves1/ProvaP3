@@ -1,0 +1,31 @@
+<h1>Lotes</h1>
+
+<p>
+  Filtrar:
+  <a href="?variedade=Pera">Pera</a> |
+  <a href="?variedade=Valência">Valência</a> |
+  <a href="?variedade=Lima">Lima</a> |
+  <a href="?">Todas</a>
+</p>
+
+<table border="1" cellpadding="6">
+  <tr>
+    <th>Produtor</th>
+    <th>Variedade</th>
+    <th>Caixas</th>
+    <th>Preço/caixa</th>
+    <th>Total</th>
+  </tr>
+  {% for lote in lotes %}
+  <tr>
+    <td>{{ lote.produtor.nome }}</td>
+    <td>{{ lote.variedade }}</td>
+    <td>{{ lote.caixas }}</td>
+    <td>R$ {{ lote.preco_caixa }}</td>
+    <td>R$ {{ lote.total }}</td>
+  </tr>
+  {% empty %}
+  <tr><td colspan="5">Nenhum lote encontrado.</td></tr>
+  {% endfor %}
+</table>
+

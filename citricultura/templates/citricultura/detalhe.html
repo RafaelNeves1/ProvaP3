@@ -1,0 +1,8 @@
+<h1>Lote #{{ lote.id }}</h1>
+<p>Produtor: {{ lote.produtor.nome }}</p>
+<p>Variedade: {{ lote.variedade }}</p>
+<p>Caixas: {{ lote.caixas }}</p>
+<p>Preço/caixa: R$ {{ lote.preco_caixa }}</p>
+<p>Total: R$ {{ lote.total }}</p>
+<p>Data: {{ lote.data }}</p>
+<a href="{% url 'lote_list' %}">Voltar</a>
